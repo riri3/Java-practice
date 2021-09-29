@@ -15,13 +15,14 @@ class Ex1_14_1{
 		//投入された硬貨を1枚ずつチェックし、合計金額を取得（使用できない場合はエラーメッセージを出力）
 		for(int i = 0 ; i < coinNum ; i++){
 
-			//今回のループでチェックする硬貨をセット
+			//今回のループでチェックする硬貨をセット。argsがstring型の値なので、これを数字に変換して変数とする。
 			coinChk = Integer.parseInt(args[i]) ;
 
 			//チェックと硬貨の種類に応じた処理を実施
 			if( coinChk == 10 || coinChk == 50 || coinChk == 100 || coinChk == 500 ){
 
 				//使用可能な硬貨であった場合、coinSumに加算
+				System.out.println( coinChk + "円が投入されました");
 				coinSum += coinChk ;
 
 			}else if( coinChk == 1 || coinChk == 5 ){
@@ -38,6 +39,6 @@ class Ex1_14_1{
 		}
 
 		//投入された硬貨の合計金額をメッセージとして出力
-		System.out.println("ただいまの投入金額は" + coinSum + "円です");
+		System.out.println("ただいまの投入金額の合計は" + coinSum + "円です");
 	}
 }
