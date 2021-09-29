@@ -7,13 +7,10 @@ class Ex1_14_1 {
 
 
 		for ( int i=0 ; i<=args.length ; i++ ) {
+			//このループでチェックする硬貨をセット
+			coinChk = Integer.parseInt(args[i]);
 
-			coinChk = Integer.parseInt(args[i])
-
-			System.out.println("ただいまの投入金額は" + coins +"円です");
-		}
-
-		if ( coinChk == 1 ) {
+		if ( coinChk == 10 || coinChk == 50 || coinChk == 100 || coinChk == 500 ) {
 			System.out.println("１円玉は使えません");
 
 		}
@@ -24,7 +21,8 @@ class Ex1_14_1 {
 		else {
 			System.out.println( coinChk + "は硬貨として適切な値ではありません" );
 		}
-
+		System.out.println("ただいまの投入金額は" + coins +"円です");
+		}
 
 	}
 }
