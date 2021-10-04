@@ -27,7 +27,7 @@ class Ex1_14_2{
 		}else if( change == 0 ){
 			System.out.println("ちょうどのお預かりです。ありがとうございました。");
 		}else {
-			// changeそのままだと-表記になってしまうため、Math.abs(change)を使って絶対数で表示する
+			// changeそのままだと-表記になってしまうため、Math.abs(change)を使って絶対値で表示する
 			System.out.println("お金が" + Math.abs(change) + "円足りません。追加で投入してください。");
 		}
 	}
